@@ -47,6 +47,7 @@ namespace cl_algo
 namespace RBC
 {
 
+    typedef unsigned int uint;
     /*! \param[in] _env opencl environment.
      *  \param[in] _info opencl configuration. Specifies the context, queue, etc, to be used.
      */
