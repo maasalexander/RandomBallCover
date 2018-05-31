@@ -41,7 +41,7 @@ namespace RBC
     {
         // Random number generators setup
         auto seed = std::chrono::system_clock::now ().time_since_epoch ().count ();
-        std::default_random_engine generator { (long long)seed };
+        std::default_random_engine generator { (unsigned int)seed };
         std::uniform_int_distribution<unsigned short> distribution1 { 0, 255 };
         std::uniform_int_distribution<unsigned short> distribution2 { 0, 10000 };
         std::uniform_real_distribution<float> distributionR1 { 0.f, 1.f };
