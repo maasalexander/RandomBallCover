@@ -154,7 +154,7 @@ namespace RBC
                 break;
             default:  // Square work-group*/
                 for (lXdim = maxLocalSize; lXdim > (size_t) std::sqrt (maxLocalSize); lXdim >>= 1) ;
-                lYdim = lXdim;
+                lYdim = lXdim/2;
         //}
 
         try
