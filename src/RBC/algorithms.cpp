@@ -142,7 +142,7 @@ namespace RBC
 
         // Establish local dimensions
         size_t lXdim, lYdim;
-        switch (K)
+        /*switch (K)
         {
             case KernelTypeC::KINECT_R:
             case KernelTypeC::KINECT_X_R:
@@ -151,11 +151,11 @@ namespace RBC
                 // points in X. We'll try to relax this, if necessary
                 for (lXdim = 4, lYdim = maxLocalSize / 4; 
                     ((nx % (4 * lYdim)) != 0) && (lXdim != lYdim); lXdim <<= 1, lYdim >>= 1) ;
-                break;
+                break;*/
             default:  // Square work-group
                 for (lXdim = maxLocalSize; lXdim > (size_t) std::sqrt (maxLocalSize); lXdim >>= 1) ;
                 lYdim = lXdim;
-        }
+        //}
 
         try
         {
